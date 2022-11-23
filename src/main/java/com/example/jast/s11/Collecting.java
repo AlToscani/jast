@@ -11,7 +11,9 @@ public class Collecting {
         System.out.println("---");
 
         System.out.print("Filter positive values, collect by toList(): ");
-        System.out.println(values.stream().filter(x -> x > 0).collect(Collectors.toList()));
+        System.out.println(values.stream() //
+        		.filter(x -> x > 0) //
+        		.collect(Collectors.toList()));
 
         System.out.print("Filter positive values, collect by counting(): ");
         System.out.println(values.stream().filter(x -> x > 0).collect(Collectors.counting()));
